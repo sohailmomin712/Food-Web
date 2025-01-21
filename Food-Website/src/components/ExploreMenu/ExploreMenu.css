@@ -39,7 +39,7 @@
 .Explore-Menu-List-Item p {
     margin-top: 10px;
     color: #747474;
-    font-size: max(1.2vw, 13px);
+    font-size: max(1.0vw, 10px);
     cursor: pointer;
 }
 
