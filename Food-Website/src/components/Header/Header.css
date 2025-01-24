@@ -27,7 +27,7 @@
 .Header-Contents p {
     color: white;
     font-size: 1vw;
-} 
+}
 
 .Header-Contents button {
     border: none;
@@ -37,4 +37,26 @@
     background-color: white;
     font-size: max(1vw, 13px);
     border-radius: 50px;
+}
+
+@media (max-width:1050px) {
+
+    .Header-Contents {
+        max-width: 45%;
+    }
+}
+
+@media (max-width:750px) {
+
+    .Header-Contents {
+        max-width: 65%;
+    }
+
+    .Header-Contents p {
+        display: none;
+    }
+
+    .Header-Contents button {
+        padding: 2vw 4vw;
+    }
 }
