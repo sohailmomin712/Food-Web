@@ -3,7 +3,7 @@ import './LoginPopUp.css'
 import { assets } from '../../assets/assets'
 // eslint-disable-next-line react/prop-types
 const LoginPopUp = ({ setShowLogin }) => {
-    const [currentState, setCurrentState] = useState("Login")
+    const [currentState, setCurrentState] = useState("Sign Up")
     return (
         <div className='login-popup'>
             <form className='login-popup-container'>
@@ -23,10 +23,9 @@ const LoginPopUp = ({ setShowLogin }) => {
                     <input type='checkbox' required />
                     <p>By continuing, I agree to the terms of use & privacy policy.</p>
                 </div>
-                {
-                    currentState === 'Login' ?
-                        <p>Create a new account? <span onClick={() => setCurrentState('Sign Up"')}>Click here</span></p> :
-                        <p>Already have an account?  <span onClick={() => setCurrentState('Login')}>Login here</span></p>
+                {currentState === 'Login' ?
+                    <p>Create a new account? <span onClick={() => setCurrentState('Sign Up')}>Click here</span></p> :
+                    <p>Already have an account?  <span onClick={() => setCurrentState('Login')}>Login here</span></p>
                 }
             </form>
         </div>
