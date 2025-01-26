@@ -81,16 +81,28 @@
 }
 
 .cart-promocode-input input {
-    background: transparent; 
+    background: transparent;
     border: none;
     outline: none;
     padding-left: 10px;
+    text-align: center;
 }
-.cart-promocode-input button{
-    width: max(10vw,150px);
+
+.cart-promocode-input button {
+    width: max(10vw, 150px);
     padding: 12px 5px;
     background-color: black;
     border: none;
     color: white;
     border-radius: 4px;
+}
+
+@media (max-width:750px) {
+    .cart-bottom {
+        flex-direction: column-reverse;
+    }
+
+    .cart-promocode {
+        justify-content: start;
+    }
 }

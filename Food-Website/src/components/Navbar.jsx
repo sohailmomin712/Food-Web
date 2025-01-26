@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { assets } from "../assets/assets";
 import "./Navbar/Navbar.css";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../Context/StoreContext";
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("Home")
+  const { getTotalCartAmount } = useContext(StoreContext)
 
   return (
     <div className="navbar">
@@ -25,7 +27,7 @@ const Navbar = ({ setShowLogin }) => {
           <Link to='/cart'>
             <img src={assets.basket_icon} />
           </Link>
-          <div className="dot"></div>
+          <div className={getTotalCartAmount()===0 ? "" : 'dot'}></div>
         </div>
         <button onClick={() => setShowLogin(true)}>Sign In</button>
       </div>
